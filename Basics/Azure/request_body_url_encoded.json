@@ -1,0 +1,35 @@
+{
+    "method": "POST",
+    "url": "https://cloudlove-twilioquest.azurewebsites.net/api/HttpTrigger1?code=G3KsV9H9yYSHeKhHXnh3etQexxja9vMCQsAcixhC8NUWUKTKloQcTw==&name=marco",
+    "originalUrl": "https://cloudlove-twilioquest.azurewebsites.net/api/HttpTrigger1?code=G3KsV9H9yYSHeKhHXnh3etQexxja9vMCQsAcixhC8NUWUKTKloQcTw==&name=marco",
+    "headers": {
+        "accept": "application/json, text/plain, */*",
+        "accept-encoding": "gzip, deflate, br",
+        "accept-language": "en-US,en;q=0.9,es-419;q=0.8,es;q=0.7,fr;q=0.6",
+        "connection": "Keep-Alive",
+        "content-length": "12",
+        "content-type": "application/json",
+        "host": "cloudlove-twilioquest.azurewebsites.net",
+        "max-forwards": "9",
+        "referer": "https://functions.azure.com/ng-min/resources/subscriptions/bb8699ae-78ba-40d9-8c0f-9fbf491b4a0e/resourcegroups/cloudlove-twilio-quest/sites/cloudlove-twilioquest/functions/httptrigger1?correlationId=65a8d6e6-922e&sessionId=40c0cf46533a4dc68347b399af68cdf2&frameId=eb815e87-864f&ElasticScaleOut=true&appsvc.bladetype=appblade&trustedAuthority=https:%2F%2Fportal.azure.com",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36",
+        "origin": "https://functions.azure.com",
+        "x-waws-unencoded-url": "/api/HttpTrigger1?code=G3KsV9H9yYSHeKhHXnh3etQexxja9vMCQsAcixhC8NUWUKTKloQcTw==&name=marco",
+        "client-ip": "10.0.128.30:27814",
+        "x-arr-log-id": "cb4ae8c9-c9ee-4d60-924b-e61ec1f631f0",
+        "disguised-host": "cloudlove-twilioquest.azurewebsites.net",
+        "x-site-deployment-id": "cloudlove-twilioquest",
+        "was-default-hostname": "cloudlove-twilioquest.azurewebsites.net",
+        "x-original-url": "/api/HttpTrigger1?code=G3KsV9H9yYSHeKhHXnh3etQexxja9vMCQsAcixhC8NUWUKTKloQcTw==&name=marco",
+        "x-forwarded-for": "187.234.116.72:7169",
+        "x-arr-ssl": "2048|256|C=US, S=Washington, L=Redmond, O=Microsoft Corporation, OU=Microsoft IT, CN=Microsoft IT TLS CA 4|CN=*.azurewebsites.net",
+        "x-forwarded-proto": "https"
+    },
+    "query": {
+        "code": "G3KsV9H9yYSHeKhHXnh3etQexxja9vMCQsAcixhC8NUWUKTKloQcTw==",
+        "name": "marco"
+    },
+    "params": {},
+    "body": "name%3Dmarco",
+    "rawBody": "name%3Dmarco"
+}
