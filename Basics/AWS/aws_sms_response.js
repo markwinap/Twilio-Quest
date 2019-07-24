@@ -6,7 +6,7 @@ exports.handler = async (event) => {
         headers: {'Access-Control-Allow-Origin': '*','content-type': 'application/xml'},
         statusCode: 200,
         body: xml([
-           twiml({Message : {}}, 'Welcome To CloudLove')
+           twiml({Message : {}}, `Hi! It looks like your phone number was born in {{ FromCountry }}`)
        ])
     };
     return response;

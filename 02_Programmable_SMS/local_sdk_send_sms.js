@@ -10,12 +10,13 @@ source ./twilio.env
 WINDOWS
 set TWILIO_ACCOUNT_SID=ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 set TWILIO_AUTH_TOKEN=your_auth_token
+MG128a15b7fb5ddf5090d507d04be383f1
 */
 const client = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
 async function sendSMS(){
     let sms = await client.messages
-    .create({from: '+15123371956', body: '8G624CVLCH0ZVUC', to: '+5214425921010'})
+    .create({from: '+16193892226', body: 'add nintendo', to: '+15123371956', statusCallback: 'https://74efcbb4.ngrok.io'})
     .then(message => message);
     console.log(sms)
 }

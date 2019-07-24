@@ -20,15 +20,17 @@ const querystring = require('querystring');
 
 main();
 async function main(){
-      let sms = await axios({
-          method: 'POST',
-          headers: { 'content-type': 'application/x-www-form-urlencoded' },
-          auth: {
-              username: process.env.TWILIO_ACCOUNT_SID,
-              password: process.env.TWILIO_AUTH_TOKEN
-          },
-          url: `https://api.twilio.com/2010-04-01/Accounts/${process.env.TWILIO_ACCOUNT_SID}/Messages.json`,
-          data: querystring.stringify({ MessagingServiceSid: 'MG128a15b7fb5ddf5090d507d04be383f1', To: '+16193040469', Body: 'Welcome To Cloud Love'})
-      }).then(res => res).catch(err => err);
-      console.log(sms)
+    for(let i = 0; i < 10; i++){
+        let sms = await axios({
+            method: 'POST',
+            headers: { 'content-type': 'application/x-www-form-urlencoded' },
+            auth: {
+                username: process.env.TWILIO_ACCOUNT_SID,
+                password: process.env.TWILIO_AUTH_TOKEN
+            },
+            url: `https://api.twilio.com/2010-04-01/Accounts/${process.env.TWILIO_ACCOUNT_SID}/Messages.json`,
+            data: querystring.stringify({ From: '+18339300695', To: '+5214425921010', Body: `This is message ${i + 1}`})
+        }).then(res => res).catch(err => err);
+        console.log(sms)
+    }    
   }

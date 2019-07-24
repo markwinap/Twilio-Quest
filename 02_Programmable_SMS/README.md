@@ -7,5 +7,5 @@
  - SMS Status Response - Return Message Sid and X-Twilio-Signature
  - SMS Copilot (Message Service)- Return Message Sid
  - Send 10 SMS Message From 6 Different Numbers Using Copilot (Message Service)
- - SMS Response - "Hi {{ Sender Phone }}, this is my favorite GIF"}
- - Send 10 SMS Message - "This is message {Message Number}"
+ - MMS Response - "Hi {{ Sender Phone }}, this is my favorite GIF"}
+ - Send 10 SMS Message From A Tool Free Number- "This is message {Message Number}"

@@ -12,7 +12,9 @@ set TWILIO_ACCOUNT_SID=ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 set TWILIO_AUTH_TOKEN=your_auth_token
 
 set TWILIO_TEST_ACCOUNT_SID=ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-set TWILIO_TEST_AUTH_TOKEN=your_auth_token
+set TWILIO_TEST_AUTH_TOKEN=your_auth_token}
+MediaUrl
+, StatusCallback: 'https://74efcbb4.ngrok.io/'
 */
 const https = require('https');
 const querystring = require('querystring');
@@ -22,7 +24,7 @@ async function main(){
             method: 'POST', //POST
             path: `/Messages.json`,
             headers: {'Content-Type':'application/x-www-form-urlencoded','Accept': 'application/json'},
-            data: querystring.stringify({ From: '+15123371956', To: '+5214425921010', Body: '+15123371956'})
+            data: querystring.stringify({ From: '+16193892226', To: '+15123371956', Body: 'Hola'})
       }
       let SMS = await twilioAPI(params).then(res => res).catch(err => {console.log(err); return false;});
       console.log(SMS)

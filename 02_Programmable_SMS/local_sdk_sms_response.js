@@ -18,7 +18,7 @@ app.get('/', function (req, res) {//http://localhost:3000/
 // POST /login gets urlencoded bodies
 app.post('/', urlencodedParser, function (req, res) {
     const response = new MessagingResponse ();
-    response.message('Hello World');
+    response.message('Hello World!');
     res.set('Content-Type', 'application/xml');
     res.send(response.toString());
 });

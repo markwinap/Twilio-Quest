@@ -19,7 +19,7 @@ To get your account token https://dashboard.ngrok.com/auth
 
 ### Open Tunnel
 ```sh
-./ngrok http 80
+./ngrok http 3000
 ```
 
 

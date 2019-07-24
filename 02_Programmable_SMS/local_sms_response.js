@@ -9,6 +9,9 @@ const jsonParser = bodyParser.json();
 // create application/x-www-form-urlencoded parser
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
+
+let todo = [];
+
 app.get('/', function (req, res) {
     res.set('Content-Type', 'application/xml');
     let message = xml([
@@ -18,9 +21,31 @@ app.get('/', function (req, res) {
 });
 // POST /login gets urlencoded bodies
 app.post('/', urlencodedParser, function (req, res) {
+    console.log(req.body)
+    console.log(req.headers)
+    /*
+    let body = req.body.Body;
+    let slice = body.slice(0, 3);
+    let respose = '';
+    if(slice == 'add'){
+        let item = body.slice(4);
+        todo.push(item);
+        respose = `Item ${item} added to todo list`;
+    }
+    else if(slice == 'lis'){
+        for(let i in todo){
+            respose += `${i} - ${todo[i]}\n`;
+        }
+    }
+    else if(slice == 'rem'){
+        todo.splice(body.slice(-1), 1);
+        respose = `Item ${body.slice(-1)} removed from todo list`;
+    }
+    console.log(respose);
+*/
     res.set('Content-Type', 'application/xml');
     let message = xml([
-        twiml({Message : {}}, 'Welcome To CloudLove')
+        twiml({Message : {}}, 'OK')
     ]);
     res.send(message);
 });
@@ -64,4 +89,42 @@ let message = xml([
         twiml({Say : {}}, 'We didnt receive any input. Goodbye!')
 ]);
 <?xml version="1.0" encoding="UTF-8"?><Response><Gather action="/process_gather.php" method="GET"><Say>Please enter your account number, followed by the pound sign</Say></Gather><Say>We didnt receive any input. Goodbye!</Say></Response>
+*/
+
+
+//Message Body
+/*
+
+{ 'content-type': 'application/x-www-form-urlencoded; charset=utf-8',
+  'x-twilio-signature': 'P1cNp9OOyqHis05PfinrC4qoxzU=',
+  'accept-encoding': 'gzip,deflate',
+  'content-length': '227',
+  host: '74efcbb4.ngrok.io',
+  'cache-control': 'max-age=259200',
+  'user-agent': 'TwilioProxy/1.1',
+  connection: 'close',
+  'x-forwarded-proto': 'https',
+  'x-forwarded-for': '54.86.154.97' }
+{ ToCountry: 'US',
+  ToState: 'TX',
+  SmsMessageSid: 'SM4e997a30466301bd4f165ab892ae8223',
+  NumMedia: '0',
+  ToCity: 'LEANDER',
+  FromZip: '92123',
+  SmsSid: 'SM4e997a30466301bd4f165ab892ae8223',
+  FromState: 'CA',
+  SmsStatus: 'received',
+  FromCity: 'SAN DIEGO',
+  Body: 'Hola',
+  FromCountry: 'US',
+  To: '+15123371956',
+  ToZip: '78645',
+  AddOns:
+   '{"status":"successful","message":null,"code":null,"results":{}}',
+  NumSegments: '1',
+  MessageSid: 'SM4e997a30466301bd4f165ab892ae8223',
+  AccountSid: 'AC31dc21046160bf3d675ef09e6bc5ce19',
+  From: '+16193892226',
+  ApiVersion: '2010-04-01' }
+
 */
